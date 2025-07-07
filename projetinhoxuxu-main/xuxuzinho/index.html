@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FELIZ ANIVERSÁRIO</title>
+    <style>
+.cabeçalho { 
+    text-align: center;
+    margin: auto;
+    background-color:rgb(252, 148, 13) ;
+    width: 700px;
+    padding: 30px;
+}
+.corpo { 
+    background-color:rgb(252, 148, 13);
+    height: 700px;
+    width: 700px;
+    padding: 30px;
+    margin: auto;
+}
+body {
+    background-image: url(img.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.btn {
+  position: relative;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 10px solid #04728d;
+  background-color: #41d3f8;
+  border-radius: 5px;
+  color: #000;
+}
+
+.texto-hover {
+  display: none;
+}
+
+.btn:hover .texto-normal {
+  display: none;
+}
+
+.btn:hover .texto-hover {
+  display: inline;
+}
+.love_me {
+    text-align: center;
+    margin: auto;
+    background-color:rgb(252, 148, 13) ;
+    width: 700px;
+    padding: 30px;
+}
+.texto-hover {
+  display: none;
+}
+.heart {
+  width: 100px;
+  height: 90px;
+  background-color: #e0245e;
+  position: relative;
+  transform: rotate(-45deg);
+  margin: 40px auto;
+  animation: pulse 1.2s infinite;
+  cursor: pointer;
+}
+
+.heart::before,
+.heart::after {
+  content: "";
+  width: 100px;
+  height: 90px;
+  background-color: #e0245e;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.heart::before {
+  top: -50px;
+  left: 0;
+}
+
+.heart::after {
+  left: 50px;
+  top: 0;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: rotate(-45deg) scale(1);
+  }
+  50% {
+    transform: rotate(-45deg) scale(1.1);
+  }
+}
+
+
+.bolo-3d {
+  width: 300px;
+  height: 350px;
+  margin: 40px auto;
+  position: relative;
+  perspective: 800px; /* mantém a profundidade 3D */
+  /* animation: girar 20s linear infinite; */ /* removida para não girar */
+  /* transform-style: preserve-3d; */ /* opcional, pode manter */
+}
+
+.camada {
+  width: 260px;
+  height: 70px;
+  margin: 0 auto;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #f28c28 0%, #e07b1e 100%);
+  box-shadow: inset 0 5px 10px rgba(255,165,79,0.6), 0 6px 12px rgba(0,0,0,0.1);
+  position: absolute;
+  left: 50%;
+  transform-style: preserve-3d;
+  opacity: 0;
+  animation-fill-mode: forwards;
+  border: 2px solid #d46a00;
+}
+
+.camada1 {
+  bottom: 0;
+  transform: translateX(-50%) translateZ(0);
+  animation: aparecer 1s ease forwards;
+  animation-delay: 0.5s;
+}
+
+.camada2 {
+  bottom: 60px;
+  transform: translateX(-50%) translateZ(30px);
+  animation: aparecer 1s ease forwards;
+  animation-delay: 1.5s;
+}
+
+.camada3 {
+  bottom: 120px;
+  transform: translateX(-50%) translateZ(60px);
+  animation: aparecer 1s ease forwards;
+  animation-delay: 2.5s;
+}
+
+.cobertura {
+  width: 280px;
+  height: 40px;
+  background: linear-gradient(135deg, #f9f4e7 0%, #f7eecf 100%);
+  border-radius: 50% / 100%;
+  position: absolute;
+  bottom: 170px;
+  left: 50%;
+  transform: translateX(-50%) translateZ(90px);
+  box-shadow: inset 0 4px 10px rgba(255,255,255,0.8);
+  border: 1.5px solid #f0e6c8;
+  opacity: 0;
+  animation: aparecer 1s ease forwards;
+  animation-delay: 3.5s;
+  filter: drop-shadow(0 2px 3px rgba(0,0,0,0.05));
+  z-index: 10;
+}
+
+.velas {
+  position: absolute;
+  bottom: 210px;
+  left: 50%;
+  transform: translateX(-50%) translateZ(120px);
+  display: flex;
+  gap: 15px;
+  opacity: 0;
+  animation: aparecer 1s ease forwards;
+  animation-delay: 4.5s;
+  z-index: 20;
+}
+
+.vela {
+  width: 12px;
+  height: 40px;
+  background: linear-gradient(to bottom, #ff5f5f 0%, #c0392b 100%);
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 2px 5px rgba(255,95,95,0.6);
+}
+
+.chama {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 24px;
+  background: radial-gradient(circle at center, #fff3b0 0%, #f39c12 70%);
+  border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+  animation: piscarChama 1.5s infinite alternate;
+  filter: drop-shadow(0 0 6px #f39c12);
+}
+
+@keyframes aparecer {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes piscarChama {
+  from {
+    opacity: 1;
+    transform: translateX(-50%) scale(1);
+  }
+  to {
+    opacity: 0.6;
+    transform: translateX(-50%) scale(1.1);
+  }
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="cabeçalho">
+        <h1>Happy birthday my Darling</h1>
+    </div>
+    <br>
+    <div class="corpo">
+        <p>
+            corpo do texto: falar as qualidades, mencionar o dia em que nos encontramos pela primeira vez, o que adqueri ao conhece-lo, 
+        </p>
+    </div>
+    <br>
+
+    <div class="bolo-3d">
+      <div class="camada camada1"></div>
+      <div class="camada camada2"></div>
+      <div class="camada camada3"></div>
+      <div class="cobertura"></div>
+      <div class="velas">
+        <div class="vela"><div class="chama"></div></div>
+        <div class="vela"><div class="chama"></div></div>
+        <div class="vela"><div class="chama"></div></div>
+      </div>
+    </div>
+    
+
+    
+    <br>
+    <div class="love_me">
+        <h2>Do you love me?</h2>
+        <button class="btn">
+            <span class="texto-normal">Sim</span>
+            <span class="texto-hover">Sim</span>
+          </button>
+          
+          <button class="btn">
+            <span class="texto-normal">Não</span>
+            <span class="texto-hover">Sim</span>
+          </button>
+    </div>
+   
+      <div class="heart"></div>
+    
+    <div>
+      <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.2/dist/confetti.browser.min.js"></script>
+<script>
+  function jogarConfete() {
+    let params = {
+      particleCount: 500,
+      spread: 90,
+      startVelocity: 70,
+      origin: { x: 0, y: 0.5 },
+      angle: 45
+    };
+    confetti(params);
+    params.origin.x = 1;
+    params.angle = 135;
+    confetti(params);
+  }
+
+  // Chama a função jogarConfete a cada 5 segundos
+  setInterval(jogarConfete, 5000);
+
+  // Opcional: jogar confete imediatamente ao carregar a página
+  jogarConfete();
+</script>
+
+    </div>
+</body>
+</html>
